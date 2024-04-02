@@ -15,14 +15,15 @@ public class Meta {
     private String version;
     private String author;
     private String createTime;
-    private FileConfigDTO fileConfig;
-    private ModelConfigDTO modelConfig;
+    private FileConfig fileConfig;
+    private ModelConfig modelConfig;
 
     @NoArgsConstructor
     @Data
-    public static class FileConfigDTO {
+    public static class FileConfig {
         private String inputRootPath;
         private String outputRootPath;
+        private String sourceRootPath;
         private String type;
         private List<FileInfo> files;
 
@@ -33,12 +34,16 @@ public class Meta {
             private String outputPath;
             private String type;
             private String generateType;
+            private String condition;
+            private String groupKey;
+            private String groupName;
+            private List<FileInfo> files;
         }
     }
 
     @NoArgsConstructor
     @Data
-    public static class ModelConfigDTO {
+    public static class ModelConfig {
         private List<ModelInfo> models;
 
         @NoArgsConstructor
@@ -49,6 +54,14 @@ public class Meta {
             private String description;
             private Object defaultValue;
             private String abbr;
+            private String groupKey;
+            private String groupName;
+            private List<ModelInfo> models;
+            private String condition;
+            // 中间参数
+            // 该分组下所有参数拼接字符串，给动态开启分组使用，由校验类自动生成
+            private String allArgsStr;
+
         }
     }
 }
