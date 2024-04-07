@@ -1,7 +1,6 @@
 package com.kunkun.maker.generator.file;
 
 import cn.hutool.core.io.FileUtil;
-import com.kunkun.maker.model.DataModel;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;

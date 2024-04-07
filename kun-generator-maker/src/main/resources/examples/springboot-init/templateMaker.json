@@ -1,0 +1,18 @@
+{
+  "id": 1,
+  "meta": {
+    "name": "springboot-init-generator",
+    "description": "springboot-init模板生成器"
+  },
+  "originProjectPath": "../../../kun-generator-demo-projects/springboot-init",
+  "fileConfig": {
+    "files": [
+
+    ]
+  },
+  "modelConfig": {
+    "models": [
+
+    ]
+  }
+}

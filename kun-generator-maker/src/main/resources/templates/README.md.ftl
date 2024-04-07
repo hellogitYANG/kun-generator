@@ -34,8 +34,10 @@ ${modelInfo?index + 1}）${modelInfo.fieldName}
 描述：${modelInfo.description}
 
 默认值：${modelInfo.defaultValue?c}
-
+<#if modelInfo.abbr??>
 缩写： -${modelInfo.abbr}
+</#if>
+
 
 </#if>
 </#list>
